@@ -1,0 +1,33 @@
+﻿<Window x:Class="socket.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:socket"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <ListBox Margin="553,0,31,0">
+            <ListBox x:Name="lstMessaggi" Height="272" Width="210"/>
+            <TextBox x:Name="txtIP" Text="Inserire indirizzo IP" TextWrapping="Wrap" Width="120"/>
+            <TextBox x:Name="txtPorta" Text="Inserire porta" TextWrapping="Wrap" Width="120"/>
+            <TextBox x:Name="txtMessaggio" Text="Inserire messaggio" TextWrapping="Wrap" Width="120"/>
+            <Button x:Name="btnInvia" Content="Invia" Click="btnInvia_Click" RenderTransformOrigin="0.5,0.5" Height="38" Width="72">
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="0.34"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+            </Button>
+        </ListBox>
+        <ListBox x:Name="lstNomi" Margin="0,53,676,233" SelectionChanged="lstNomi_SelectionChanged"/>
+        <Label Content="Lista contatti" HorizontalAlignment="Left" Margin="0,31,0,0" VerticalAlignment="Top" Width="124" Height="29"/>
+        <Button x:Name="btnBroadCast" Content="Broadcast" HorizontalAlignment="Left" Margin="210,122,0,0" VerticalAlignment="Top" Height="46" Width="112" Click="btnBroadCast_Click"/>
+        <Label Content="Selezionando un nome dai contatti, verranno automaticamente scritti la sua porta e il suo indirizzo" HorizontalAlignment="Left" VerticalAlignment="Top" Width="533"/>
+        <Label Content="Cliccando il bottone &quot;broadcast&quot;, verrà inviato&#xD;&#xA; il messaggio scritto in basso a destra a tutti i contatti" HorizontalAlignment="Left" Margin="155,66,0,0" VerticalAlignment="Top" Width="312" Height="56"/>
+
+    </Grid>
+</Window>
