@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Programmi\\socket\\socket\\socket.csproj",
+      "projectUniqueName": "D:\\Git\\socket\\socket\\socket.csproj",
       "projectName": "socket",
-      "projectPath": "D:\\Programmi\\socket\\socket\\socket.csproj",
+      "projectPath": "D:\\Git\\socket\\socket\\socket.csproj",
       "packagesPath": "C:\\Users\\gieki\\.nuget\\packages\\",
-      "outputPath": "D:\\Programmi\\socket\\socket\\obj\\",
+      "outputPath": "D:\\Git\\socket\\socket\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\gieki\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "bw7LNB2OzIfYzbLgYXqcELNbWp63RMA87FXuxisqs4yba8qTkZQEy/9Nq2MSVu9FVUmMsmXgLHjGIR+yQiYllg==",
+  "dgSpecHash": "/Y/qJ34qKXgfH5iO9gsc26nJOl24qfYpgCVNPxjRKHeVcd0GOp2KP3CfH/jEHrHj1k5JDISKK+d0+XMemZOa7A==",
   "success": true,
-  "projectFilePath": "D:\\Programmi\\socket\\socket\\socket.csproj",
+  "projectFilePath": "D:\\Git\\socket\\socket\\socket.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

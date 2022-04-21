@@ -57,18 +57,32 @@ namespace socket
             //socket.Blocking = false;
             //socket.EnableBroadcast = true;
             dTimer = new DispatcherTimer();
-
+            Thread t1 = new Thread(new ThreadStart(thread));
+            t1.Start();
 
             //all'arrivo del tick fa quello nel metodo cioè aggiorna per vedere se ci sono nuovi messaggi 
-            dTimer.Tick += new EventHandler(aggiornamento_dTimer);
+            
             //vado a dire ogni quanto deve leggere il socket cioè fare il tick andando a vedere se qualcuno mi ha scritto qualcosa(frequenza di aggiornamento)
-            dTimer.Interval = new TimeSpan(0, 0, 0, 0, 250);
-            dTimer.Start();
         }
 
-     
 
-        private void aggiornamento_dTimer(object sender, EventArgs e)
+        public void thread()
+        {
+            int i = 0;
+            while (i==0)
+            {
+                Thread.Sleep(TimeSpan.FromMilliseconds(250));
+                this.Dispatcher.BeginInvoke(new Action(() =>
+                {
+                    aggiornamento_dTimer();
+
+                }));
+            }
+
+
+        }
+
+        private void aggiornamento_dTimer()
         {
 
             int nBytes = 0;
