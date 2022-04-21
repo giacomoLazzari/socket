@@ -55,22 +55,21 @@ namespace socket
             socket.Bind(local_endpoint);
 
             //socket.Blocking = false;
-            //socket.EnableBroadcast = true;
-            dTimer = new DispatcherTimer();
+            //dichiaro il nuovo thread che verrà lanciato sul metodo "thread"
             Thread t1 = new Thread(new ThreadStart(thread));
+            //lancio il thread
             t1.Start();
-
-            //all'arrivo del tick fa quello nel metodo cioè aggiorna per vedere se ci sono nuovi messaggi 
-            
-            //vado a dire ogni quanto deve leggere il socket cioè fare il tick andando a vedere se qualcuno mi ha scritto qualcosa(frequenza di aggiornamento)
         }
 
 
         public void thread()
         {
             int i = 0;
+            //imposto "i" uguale a 0 permettendo a questo while di ciclare fino a che il programma è in esecuzione
             while (i==0)
             {
+                //imposto il tempo di attesa tra un aggiornamento e l'altro di 250 millisecondi, in questo tempo il thread starà dormendo e in attesa di essere risvegliato per
+                // lanciare di nuovo il metodo "aggiornamento_dTimer" che andrà a visualizzare se ci sono dei nuovi messaggi
                 Thread.Sleep(TimeSpan.FromMilliseconds(250));
                 this.Dispatcher.BeginInvoke(new Action(() =>
                 {
